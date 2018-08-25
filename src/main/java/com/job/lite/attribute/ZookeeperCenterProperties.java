@@ -5,9 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Created by Administrator on 2018/8/25 0025.
  */
-@ConfigurationProperties(prefix = "elastic.job.zk")
+@ConfigurationProperties(prefix = "elastic.job.zookeeper")
 public class ZookeeperCenterProperties {
-    private String zkAddressList;
+    private String addressList;
     private String namespace;
     private int baseSleepTimeMilliseconds = 1000;
     private int maxSleepTimeMilliseconds = 3000;
@@ -15,13 +15,6 @@ public class ZookeeperCenterProperties {
     private int connectionTimeoutMilliseconds = 15000;
     private int sessionTimeoutMilliseconds = 60000;
     private String digest;
-    public String getZkAddressList() {
-        return zkAddressList;
-    }
-
-    public void setZkAddressList(String zkAddressList) {
-        this.zkAddressList = zkAddressList;
-    }
 
     public String getNamespace() {
         return namespace;
@@ -80,4 +73,11 @@ public class ZookeeperCenterProperties {
     }
 
 
+    public String getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(String addressList) {
+        this.addressList = addressList;
+    }
 }

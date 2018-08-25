@@ -36,11 +36,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * The class Elastic job auto configuration.
- *
- * @author paascloud.net @gmail.com
- */
 @Configuration
 @ConditionalOnExpression("'${elaticjob.zookeeper.server-lists}'.length() > 0")
 public class ElasticJobAutoConfiguration {

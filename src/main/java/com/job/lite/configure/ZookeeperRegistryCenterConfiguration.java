@@ -33,7 +33,7 @@ public class ZookeeperRegistryCenterConfiguration {
 	@Bean(initMethod = "init")
 	@ConditionalOnMissingBean
 	public ZookeeperRegistryCenter zookeeperRegistryCenter() {
-		ZookeeperConfiguration zookeeperConfiguration = new ZookeeperConfiguration(zookeeperCenterProperties.getZkAddressList(), zookeeperCenterProperties.getNamespace());
+		ZookeeperConfiguration zookeeperConfiguration = new ZookeeperConfiguration(zookeeperCenterProperties.getAddressList(), zookeeperCenterProperties.getNamespace());
 		zookeeperConfiguration.setBaseSleepTimeMilliseconds(zookeeperCenterProperties.getBaseSleepTimeMilliseconds());
 		zookeeperConfiguration.setConnectionTimeoutMilliseconds(zookeeperCenterProperties.getConnectionTimeoutMilliseconds());
 		zookeeperConfiguration.setMaxSleepTimeMilliseconds(zookeeperCenterProperties.getMaxSleepTimeMilliseconds());

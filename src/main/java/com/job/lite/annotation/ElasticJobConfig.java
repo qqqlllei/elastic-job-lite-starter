@@ -5,12 +5,6 @@ import com.dangdang.ddframe.job.lite.api.listener.ElasticJobListener;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.*;
-
-/**
- * The interface Elastic job config.
- *
- * @author paascloud.net @gmail.com
- */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
