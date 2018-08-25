@@ -27,7 +27,7 @@ public @interface ElasticJobConfig {
 	int maxTimeDiffSeconds() default -1;
 	String jobShardingStrategyClass() default "";
 	int reconcileIntervalMinutes() default 10;
-	String eventTraceRdbDataSource() default "dataSource";
+	String eventTraceRdbDataSource() default "";
 	boolean overwrite() default true;
 	boolean disabled() default false;
 	Class<? extends ElasticJobListener> listener() default ElasticJobListener.class;

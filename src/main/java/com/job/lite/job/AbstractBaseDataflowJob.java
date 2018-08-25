@@ -37,18 +37,12 @@ public abstract class AbstractBaseDataflowJob<T> implements DataflowJob<T> {
 		return taskLst;
 	}
 
-	/**
-	 * Process data.
-	 *
-	 * @param shardingContext the sharding context
-	 * @param workerTask      the worker task
-	 */
 	@Override
 	public void processData(ShardingContext shardingContext, List<T> workerTask) {
-		logger.info("任务[" + workerTask.get(0).getClass().getName() + "]开始执行...");
+		logger.info("任务[" +shardingContext.getJobName() + "]开始执行...");
 		long startTimestamp = System.currentTimeMillis();
 		processJobData(workerTask);
 		long endTimestamp = System.currentTimeMillis();
-		logger.info("任务[" + workerTask.get(0).getClass().getName() + "]执行完毕:耗时=[{}]", (endTimestamp - startTimestamp));
+		logger.info("任务[" + shardingContext.getJobName() + "]执行完毕:耗时=[{}]", (endTimestamp - startTimestamp));
 	}
 }
