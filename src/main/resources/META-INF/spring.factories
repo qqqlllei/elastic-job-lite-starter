@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.job.lite.configure.ZookeeperRegistryCenterConfiguration,\
+  com.job.lite.configure.ElasticJobAutoConfiguration
