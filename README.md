@@ -1,4 +1,4 @@
-{
+```
 @ElasticJobConfig(cron = "0/50 * * * * ? ", jobParameter = "{'fetchNum':'200','taskType':'SENDING_MESSAGE'}",description="还款计划定时查询接口")
 @Component
 public class DataflowJobDemo extends AbstractBaseDataflowJob<User> {
@@ -23,4 +23,4 @@ public class DataflowJobDemo extends AbstractBaseDataflowJob<User> {
 		logger.info("processJobData - taskList={}", taskList);
 	}
 }
-}
+```
