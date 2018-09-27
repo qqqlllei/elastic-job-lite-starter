@@ -38,5 +38,5 @@ elastic:
     job:
         zookeeper:
             addressList: 10.33.80.101:2181
-                namespace: elastic-job-${spring.application.name}
+            namespace: elastic-job-${spring.application.name}
 ```
